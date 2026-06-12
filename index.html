@@ -32,6 +32,15 @@
           <canvas id="next-canvas" width="120" height="120"></canvas>
         </div>
 
+        <div class="panel-section records-panel">
+          <span class="label">RECORDS</span>
+          <ul class="records-list">
+            <li><span class="rec-label">Mejor puntuación</span><span class="rec-value" id="rec-best-score">0</span></li>
+            <li><span class="rec-label">Máx. líneas</span><span class="rec-value" id="rec-best-lines">0</span></li>
+            <li><span class="rec-label">Mejor combo</span><span class="rec-value" id="rec-best-combo">0</span></li>
+          </ul>
+        </div>
+
         <div class="panel-section controls">
           <span class="label">CONTROLS</span>
           <ul>
@@ -49,7 +58,27 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
-        <button id="restart-btn">Reiniciar</button>
+
+        <!-- Name entry (shown only on game over, before saving) -->
+        <div id="overlay-name-section" class="hidden">
+          <label class="hs-name-label" for="overlay-name-input">Tu nombre:</label>
+          <div class="hs-name-row">
+            <input id="overlay-name-input" class="hs-name-input" type="text" maxlength="16" placeholder="AAA" autocomplete="off" />
+            <button id="overlay-save-btn" class="hs-save-btn">Guardar</button>
+          </div>
+        </div>
+
+        <!-- High-scores table (shown after saving or on start screen) -->
+        <div id="overlay-hs-table" class="hidden"></div>
+
+        <!-- Start-screen play button -->
+        <button id="start-play-btn" class="hidden">Jugar</button>
+
+        <!-- Reset records button -->
+        <button id="overlay-reset-btn" class="hs-reset-btn hidden">Resetear records</button>
+
+        <!-- Restart button (shown after saving score) -->
+        <button id="restart-btn" class="hidden">Reiniciar</button>
       </div>
     </div>
   </div>
