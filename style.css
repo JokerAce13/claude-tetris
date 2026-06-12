@@ -226,3 +226,30 @@ kbd {
 .theme-toggle:hover {
   filter: brightness(1.15);
 }
+
+/* ---- Skin Selector ---- */
+.skin-select {
+  background: var(--toggle-bg);
+  border: 1px solid var(--toggle-border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.skin-select:hover {
+  filter: brightness(1.15);
+}
+
+.skin-select:focus {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
